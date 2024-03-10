@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventsComponent } from './events.component';
+import { DashboardOrgComponent } from './dashboard-org.component';
 
-describe('EventsComponent', () => {
-  let component: EventsComponent;
-  let fixture: ComponentFixture<EventsComponent>;
+describe('DashboardOrgComponent', () => {
+  let component: DashboardOrgComponent;
+  let fixture: ComponentFixture<DashboardOrgComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EventsComponent]
+      imports: [DashboardOrgComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(EventsComponent);
+    fixture = TestBed.createComponent(DashboardOrgComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
