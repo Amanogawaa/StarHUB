@@ -1,52 +1,91 @@
 <app-sidebar-org></app-sidebar-org>
 
 <div class="p-4 sm:ml-64">
-  <div class="p-4 rounded-lg h-full bg-slate-100 shadow-md shadow-slate-500">
-    <div class="">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="form-group">
-            <img src="" alt="image here" class="img-fluid" id="imagePreview" />
-            <label for="imageUpload" class="btn btn-primary">Add Image</label>
-            <input
-              type="file"
-              id="imageUpload"
-              style="display: none"
-              accept="image/*"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="eventTitle">Event title</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <label for="">Event Registration Time - End Time</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <label for="">Event Registration Start Date - End Date</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <label for="">Location/Venue</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <label for="">Description</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create</button>
-          </div>
-        </div>
+  <div class="p-4 h-full">
+    <form
+      class="max-w-sm mx-auto border border-gray-300 p-10 bg-slate-100 rounded-md shadow-md shadow-gray-400"
+    >
+      <div class="mb-5">
+        <label
+          for="event-title"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Event Title</label
+        >
+        <input
+          type="text"
+          id="event-title"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder=""
+          required
+        />
       </div>
-    </div>
+      <div class="mb-5">
+        <label
+          for="event-time"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Event Registration Time - End Time</label
+        >
+        <input
+          type="text"
+          id="event-time"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="event-date"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Event Registration Start Date - End Date</label
+        >
+        <input
+          type="text"
+          id="event-date"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="location"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Location/Venue</label
+        >
+        <input
+          type="text"
+          id="location"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="description"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Description</label
+        >
+        <input
+          type="text"
+          id="description"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label for="attendance">Upload image of the event-date</label>
+        <input
+          class="block w-full text-sm text-gray-900 border border-gray-600 rounded-lg cursor-pointer bg-gray-50"
+          id="event-image"
+          type="file"
+        />
+      </div>
+      <button
+        type="button"
+        class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
+      >
+        Create Event
+      </button>
+    </form>
   </div>
 </div>
 
