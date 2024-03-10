@@ -6,6 +6,8 @@ import { ProfileComponent } from './modules/user-module/components/views/profile
 import { EventsComponent } from './modules/user-module/components/views/events/events.component';
 import { AttendanceComponent } from './modules/user-module/components/views/attendance/attendance.component';
 import { FeedbackComponent } from './modules/user-module/components/views/feedback/feedback.component';
+import { EventsOrgComponent } from './modules/organizer-module/components/views/events-org/events-org.component';
+import { DashboardOrgComponent } from './modules/organizer-module/components/views/dashboard-org/dashboard-org.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,4 +18,6 @@ export const routes: Routes = [
   { path: 'events', component: EventsComponent },
   { path: 'attendance', component: AttendanceComponent },
   { path: 'feedback', component: FeedbackComponent },
+  { path: 'organizer/events', component: EventsOrgComponent },
+  { path: 'organizer/dashboard', component: DashboardOrgComponent },
 ];
