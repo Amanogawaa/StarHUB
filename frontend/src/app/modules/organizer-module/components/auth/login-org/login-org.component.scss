@@ -1,0 +1,28 @@
+.event-container {
+  border: 1px solid #b9b8b8;
+  border-radius: 18px;
+  box-shadow: 5px 3px #c5c2c2;
+  margin-bottom: 5px;
+  background-color: rgb(242, 232, 206);
+  padding: 20px;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.event-image {
+  margin-bottom: 10px;
+}
+
+.event-description {
+  max-height: 80px;
+  /* Adjust as needed */
+  overflow: hidden;
+}
+
+.read-more {
+  /* Style your button */
+}
+
+.update-button {
+  /* Style your button */
+}
