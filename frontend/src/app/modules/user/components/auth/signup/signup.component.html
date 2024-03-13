@@ -25,7 +25,10 @@
         Welcome to <span class="text-green-900 font-semibold">Star-HUB</span>,
         <span class="text-orange-700 font-extrabold">GCIANS!</span>
       </h1>
-      <form class="max-w-md mx-auto my-10 font-primary-fonts">
+      <form
+        class="max-w-md mx-auto my-10 font-primary-fonts"
+        [formGroup]="registerForm"
+      >
         <!-- first and last name input -->
         <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 w-full mb-5 group">
@@ -66,14 +69,14 @@
           <div class="relative z-0 w-full mb-5 group">
             <input
               type="text"
-              name="floating_first_name"
-              id="floating_first_name"
+              name="course"
+              id="course"
               formControlName="course"
               class="block py-2.5 px-0 w-full text-sm text-slate-700 font-medium bg-transparent border-0 border-b-2 border-b-slate-500 appearance-none focus:outline-none focus:ring-0 focus:border-slate-700 peer"
               placeholder=" "
             />
             <label
-              for="floating_first_name"
+              for="course"
               class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-7 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-slate-700 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 transition-transform"
               >Course/Block</label
             >
@@ -86,7 +89,7 @@
             type="email"
             name="floating_email"
             id="floating_email"
-            formControlName="student_email"
+            formControlName="email"
             class="block py-2.5 px-0 w-full text-sm text-slate-700 font-medium bg-transparent border-0 border-b-2 border-b-slate-500 appearance-none focus:outline-none focus:ring-0 focus:border-slate-700 peer"
             placeholder=" "
             required
@@ -165,4 +168,4 @@
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

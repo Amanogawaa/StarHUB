@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl: string = 'http://localhost/StarHUB/backend/public/api';
-
-  constructor(private http: HttpClient) {}
-
-  register() {}
+  // private apiUrl: string = 'http://localhost/StarHUB/backend/public/api';
+  // constructor(private http: HttpClient) {}
+  // register(inputData: any) {
+  //   return this.http.post(`${this.apiUrl + '/adduser'}`, inputData);
+  // }
 }
