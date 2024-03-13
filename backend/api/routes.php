@@ -99,7 +99,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 echo json_encode($post->edit_event($pdo, $data, $request[1]));
                 break;
             case 'deleteevent':
-                echo json_encode($post->delete_event($pdo, $data, $request[1]));
+                echo json_encode($post->delete_event($pdo, $request[1]));
                 break;
             // Add more cases for other endpoints if needed
             default:
