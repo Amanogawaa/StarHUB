@@ -24,11 +24,11 @@ class UserService
 
     function register($user)
     {
-        if (!(Checker::isFieldExist($user, ["username", "firstname", "lastname", "email", "password", "confirm_password"]))) {
+        if (!(Checker::isFieldExist($user, ["firstname", "lastname", "email", "password", "confirm_password"]))) {
             return Response::payload(
                 400,
                 false,
-                "username, firstname, lastname, email, password, confirm_password is required"
+                "firstname, lastname, email, password, confirm_password is required"
             );
         }
 
@@ -49,7 +49,7 @@ class UserService
             true,
             "registration successful",
             errors: $errors
-        ) : array("message" => "Contact administrator (adriangallanomain@gmail.com)");
+        ) : array("message" => "Contact administrator");
     }
 
     function getInformation($id)
@@ -108,19 +108,12 @@ class UserService
 
         $isUpdated = $this->userModel->update($id, $newUserInfo);
         return $isUpdated ? Response::payload(200, true, "Update successful")
-            : array("message" => "Contact administrator (adriangallanomain@gmail.com)");
+            : array("message" => "Contact administrator");
     }
     function validate($user)
     {
         $errors = array();
 
-        if (Checker::isFieldExist($user, ["username"])) {
-            $isUsernameExist = $this->UsernameExist($user["username"]);
-            $validateUsername = $this->validateUsernameFormat($user["username"]);
-
-            if ($isUsernameExist) $errors["username"] = $isUsernameExist;
-            if ($validateUsername) $errors["username"] = $validateUsername;
-        }
         if (Checker::isFieldExist($user, ["firstname"])) {
             $validateFirstName = $this->validateFirstNameFormat($user["firstname"]);
             if ($validateFirstName) $errors["firstname"] = $validateFirstName;
@@ -146,11 +139,6 @@ class UserService
 
         return $errors;
     }
-    function UsernameExist($username)
-    {
-        $username = $this->authenticationModel->get("username", $username);
-        return $username == true ? "username already exist" : false;
-    }
 
     function EmailExist($email)
     {
@@ -158,10 +146,6 @@ class UserService
         return $email == true ? "email already exist" : false;
     }
 
-    function validateUsernameFormat($username)
-    {
-        return preg_match('/^[a-zA-Z0-9_]+$/', $username) ? null : "username should contain only letters, numbers, and underscores";
-    }
     function validateFirstNameFormat($firstname)
     {
         return preg_match('/^[a-zA-Z ]+$/', $firstname) ? null : "should contain only letters and spaces";
