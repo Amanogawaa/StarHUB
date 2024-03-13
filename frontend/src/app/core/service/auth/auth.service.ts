@@ -8,4 +8,6 @@ export class AuthService {
   private apiUrl: string = 'http://localhost/StarHUB/backend/public/api';
 
   constructor(private http: HttpClient) {}
+
+  register() {}
 }

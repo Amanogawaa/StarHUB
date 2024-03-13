@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-organizer-login',
+  selector: 'app-organizer-signup',
   standalone: true,
   imports: [RouterLink, RouterOutlet],
-  templateUrl: './organizer-login.component.html',
-  styleUrl: './organizer-login.component.css',
+  templateUrl: './organizer-signup.component.html',
+  styleUrl: './organizer-signup.component.css',
 })
-export class OrganizerLoginComponent {}
+export class OrganizerSignupComponent {}
