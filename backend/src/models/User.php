@@ -31,21 +31,19 @@ class User
 
     function create($user)
     {
-        $username = $user['username'];
         $firstname = $user['firstname'];
         $lastname = $user['lastname'];
         $email = $user['email'];
         $password = $user['password'];
 
-        $queryStr = "INSERT INTO User (username, first_name, last_name, email, password) 
-        VALUES (:username, :firstname, :lastname, :email, :password)";
+        $queryStr = "INSERT INTO User (first_name, last_name, email, password) 
+        VALUES (:firstname, :lastname, :email, :password)";
 
         $stmt = $this->pdo->prepare($queryStr);
 
         try {
             $stmt->execute(
                 array(
-                    "username" => $username,
                     "firstname" => $firstname,
                     "lastname" => $lastname,
                     "email" => $email,
@@ -61,13 +59,11 @@ class User
 
     function update($id, $request)
     {
-        $username = $request['username'];
         $firstname = $request['firstname'];
         $lastname = $request['lastname'];
 
         $queryStr = "UPDATE user 
-        SET username=:username,
-        first_name=:firstname,
+        SET first_name=:firstname,
         last_name=:lastname
         WHERE user_id = :id";
 
@@ -75,7 +71,6 @@ class User
         try {
             $stmt->execute(
                 array(
-                    "username" => $username,
                     "firstname" => $firstname,
                     "lastname" => $lastname,
                     "id" => $id
