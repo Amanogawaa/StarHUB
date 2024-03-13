@@ -1,0 +1,97 @@
+<!-- background -->
+<div
+  class="w-screen h-screen"
+  style="
+    position: absolute;
+    filter: brightness(0.5);
+    background-image: url('../../../../../../assets/images/gc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  "
+></div>
+<!-- body -->
+<div id="wrapper" class="w-screen h-screen">
+  <!--container -->
+  <div
+    class="h-screen flex justify-center items-center xl:justify-end xl:mr-20 max-sm:mx-5"
+  >
+    <!-- form container -->
+    <div
+      class="w-[440px] px-12 pt-10 rounded-2xl bg-white drop-shadow-xl border border-gray-100"
+    >
+      <h1 class="text-center font-medium text-lg">
+        Welcome to <span class="text-green-900 font-semibold">Star-HUB</span>,
+        <span class="text-orange-700 font-extrabold">GCIANS!</span>
+      </h1>
+      <form class="h-full max-w-md mx-auto my-10 font-primary-fonts">
+        <!-- email input -->
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="email"
+            name="floating_email"
+            id="floating_email"
+            formControlName="student_email"
+            class="block py-2.5 px-0 w-full text-sm text-slate-700 font-medium bg-transparent border-0 border-b-2 border-b-slate-500 appearance-none focus:outline-none focus:ring-0 focus:border-slate-700 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            for="floating_email"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-slate-700 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 transition-transform"
+            >Email address</label
+          >
+        </div>
+
+        <!-- Password Section -->
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="password"
+            name="floating_password"
+            id="floating_password"
+            formControlName="password"
+            class="block py-2.5 px-0 w-full text-sm text-slate-700 font-medium bg-transparent border-0 border-b-2 border-b-slate-500 appearance-none dark:text-black focus:outline-none focus:ring-0 focus:border-slate-700 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            for="floating_password"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-slate-700 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 transition-transform"
+            >Password</label
+          >
+        </div>
+
+        <div class="flex justify-center my-8">
+          <button
+            type="submit"
+            class="text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-800 focus:outline-none font-bold rounded-lg text-sm w-full sm:w-auto px-7 py-2.5 text-center"
+          >
+            Login
+          </button>
+        </div>
+
+        <div class="mt-8">
+          <div class="inline-flex items-center justify-center w-full">
+            <hr class="w-full h-px my-8 bg-slate-800 border-0" />
+            <span
+              class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2"
+              >or</span
+            >
+          </div>
+          <div class="mb-0">
+            <p class="text-center mt-4 py-0">
+              Don't have an account?
+              <a
+                class="text-blue-600 font-semibold hover:text-blue-700 focus:text-blue-900"
+                routerLink="/signup"
+                >Signup here</a
+              >
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
