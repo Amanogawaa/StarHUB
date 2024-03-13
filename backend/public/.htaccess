@@ -2,7 +2,7 @@
     RewriteEngine On
 
     # additions
-    RewriteBase /STARHUB/backend/public
+    RewriteBase /StarHUB/backend/public
     # end
 
     RewriteCond ${REQUEST_FILENAME} !-d
