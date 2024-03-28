@@ -9,13 +9,18 @@
       >
         Welcome <span class="text-green-500">Gcians!</span>
       </h1>
-      <form class="max-w-sm mx-auto sm:w-full">
+      <form
+        class="max-w-sm mx-auto sm:w-full"
+        [formGroup]="loginForm"
+        (ngSubmit)="submitLogin()"
+      >
         <!-- email -->
         <div class="relative z-0 w-full mb-5 group">
           <input
             type="email"
             name="email"
             id="email"
+            formControlName="email"
             class="block px-0 w-full text-sm text-black-rich_black bg-transparent border-0 border-b-2 border-green-400 appearance-non focus:outline-none focus:ring-0 focus:border-green-500 peer rounded-sm"
             placeholder=""
           />
@@ -32,6 +37,7 @@
             type="password"
             name="password"
             id="password"
+            formControlName="password"
             class="block py-2.5 px-0 w-full text-sm text-black-rich_black bg-transparent border-0 border-b-2 border-green-400 appearance-non focus:outline-none focus:ring-0 focus:border-green-500 peer rounded-sm"
             placeholder=""
           />
@@ -44,6 +50,7 @@
 
         <div class="flex w-full justify-center">
           <button
+            (click)="login()"
             type="submit"
             class="text-white-gainsboro mx-auto block md:w-[50%] bg-green-500 hover:bg-green-600 focus:outline-none font-medium rounded-xl text-sm sm:w-auto px-5 py-2.5 text-center"
           >
@@ -51,8 +58,8 @@
           </button>
         </div>
 
-        <div class="mb-0">
-          <p class="text-center text-sm mt-4 py-0 font-primary">
+        <div class="my-5">
+          <p class="text-center text-sm py-0 font-primary">
             Don't have an account?
             <a
               class="text-green-meduim_sea_green font-semibold hover:text-green-forest_green focus:text-green-sea_green"
@@ -63,7 +70,6 @@
         </div>
       </form>
     </div>
-    <!-- logo -->
 
     <div class="sm:mx-auto">
       <h1 class="text-center text-4xl font-primary font-bold">
